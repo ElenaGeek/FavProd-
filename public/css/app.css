@@ -1,0 +1,10 @@
+.performance {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-image: url(/storage/images/mainft.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+}/*# sourceMappingURL=app.css.map */

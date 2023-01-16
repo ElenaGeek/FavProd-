@@ -1,0 +1,17 @@
+// @import "mixins";
+// @import "vars";
+// @import "styles";
+
+// @import "./components/header";
+// @import "./components/footer";
+// @import "./components/main_index";
+
+@import "./mixins/block";
+
+.performance {
+    @include flex-v-center;
+    height: 100vh;
+    background-image: url(/storage/images/mainft.png);
+    @include bg-cover;
+    color: var(--color-white);
+}
