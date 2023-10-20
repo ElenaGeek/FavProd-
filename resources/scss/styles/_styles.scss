@@ -1,0 +1,78 @@
+// Файл для шрифтов, сбросов стилей и прочие глобальные вещи
+@import "norm";
+@import "start";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+html {
+    min-width: 320px;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    //overflow-x: hidden;
+    //scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-background-body);
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+main {
+    flex-grow: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.action {
+    @include flex-v-center;
+    height: 100vh;
+    background-image: url(/storage/images/mainft.png);
+    @include bg-cover;
+    color: var(--color-white);
+}
+.menu{
+    background-color: cornsilk;
+}
+
+.footer {
+    margin-top: auto;
+}
+

@@ -6,12 +6,9 @@
 // @import "./components/footer";
 // @import "./components/main_index";
 
-@import "./mixins/block";
+@import "./mixins/blocks";
+@import "./vars/vars";
+@import "./styles/styles";
 
-.performance {
-    @include flex-v-center;
-    height: 100vh;
-    background-image: url(/storage/images/mainft.png);
-    @include bg-cover;
-    color: var(--color-white);
-}
+@import "./components/header";
+

@@ -1,0 +1,56 @@
+<header class="header">
+    <a href="{{ route('home') }}">
+        <img class="header__logo" src="/images/logo.png" alt="logo">
+    </a>
+    <nav>
+        <button class="burger" onclick="this.classList.toggle('burger--active');
+        menu.classList.toggle('header__menu--opened')">
+            <div class="burger__line"></div>
+        </button>
+        <ul class="header__menu" id="menu">
+            <li class="header__menu-item">
+                <a class="header__menu-link" href="{{ route('home') }}">Главная</a>
+            </li>
+
+            @guest
+                @if (Route::has('login'))
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                @endif
+                @if (Route::has('register'))
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="{{ route('trip') }}">Совместные поездки</a>
+                </li>
+
+                @if (Auth::user()->is_admin)
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="{{ route('admin.index') }}">Админка</a>
+                    </li>
+                @endif
+
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="{{ route('account') }}">{{ Auth::user()->name }}</a>
+                </li>
+
+                <li class="header__menu-item">
+                    <a class="header__menu-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" hidden>
+                        @csrf
+                    </form>
+                </li>
+
+            @endguest
+
+        </ul>
+    </nav>
+</header>

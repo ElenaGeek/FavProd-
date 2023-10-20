@@ -14,9 +14,8 @@
 
 <body>
 
-<div id="app">
+<div class="page-container">
 
-    <x-menu/>
     <x-header/>
 
     @yield('content')

@@ -1,32 +1,27 @@
-@extends('layouts.main')
+@extends('layouts.base')
 
 @section('title')
-    Города России - @parent
+    Мой сайт - @parent
 @stop
 
 @section('content')
     <main>
-
-        <div class="performance wrapper">
-            <div class="container">
-                <h1 class="performance__title">
-                    Еда
-                </h1>
-                <h2 class="performance__text">
-                    Многообразие впечатляет, главное - выбрать то, что нужно
-                </h2>
-            </div>
-        </div>
+  
+        <x-action/>
 
         @php
         //dump($catalog);
         @endphp
 
-        <section class="presentation container wrapper">
+        <section class="presentation container">
 
+        <x-main/>
+     
         @foreach ($catalog as $item =>$array)
         <h3>Каталог {{ $array['name']}}</h3>
         @endforeach
+
+        <x-popular/>
 
         </section>
 

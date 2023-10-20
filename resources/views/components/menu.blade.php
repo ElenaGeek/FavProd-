@@ -1,6 +1,5 @@
-<div class="menu">
+<div class="header-container header-menu">
 
-	<br>
 	@foreach($menu as $item)
 	<div>
 		<a href="{{route($item['alias'])}}">
@@ -8,7 +7,7 @@
 		</a>
 	</div>
 	@endforeach
-	<hr>
 
+<!--	<hr> -->
 
 </div>

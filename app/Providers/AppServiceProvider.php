@@ -30,17 +30,16 @@ class AppServiceProvider extends ServiceProvider
             [
                 'title' => 'Home page',
                 'alias' => 'home'
-            ],
-
-    /*        
+            ],          
             [
                 'title' => 'Новости',
-                'alias' => 'category'
+                'alias' => 'home'
             ],
             [
-                'title' => 'Админка новостей',
-                'alias' => 'admin::news::index'
+                'title' => 'Админка',
+                'alias' => 'home'
             ],
+ /*
             [
                 'title' => 'Админка категорий',
                 'alias' => 'admin::categories::index'

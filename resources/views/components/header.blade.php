@@ -1,19 +1,27 @@
 <header class="header">
-    <a href="{{ route('home') }}">
-        <img class="header__logo" src="/images/logo.png" alt="logo">
-    </a>
-    <nav>
-        <button class="burger" onclick="this.classList.toggle('burger--active');
-        menu.classList.toggle('header__menu--opened')">
-            <div class="burger__line"></div>
-        </button>
-        <ul class="header__menu" id="menu">
-            <li class="header__menu-item">
-                <a class="header__menu-link" href="{{ route('home') }}">Главная</a>
-            </li>
+<!-- 1-st variant Providers/AppServiceProvider.php to keep menu on each page -->
+    <x-menu/>
 
+<!-- 2-nd variant Burger from CitiesOfRussia - mys project 
+    <x-burger/> 
+-->
 
-            
-        </ul>
-    </nav>
+<!-- 3-rd variant Tatar example -->
+
+    <div class="header-container header-list">   
+            <a class="header-logo" href="/">
+                <img class="/img" src="/img/logo.svg" alt="Logo">
+            </a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="https://daybyday.tatar/places">Места</a></li>
+                    <li><a href="https://daybyday.tatar/routes">Маршруты</a></li>
+                    <li><a href="https://daybyday.tatar/authors">Авторы</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                                <a class="header-login dif link posr" href="#sign-in" data-modal-btn="">Войти</a>
+                                <a class="header-btn  dif link aic jcc transition" href="#">Меню</a>
+            </div>    
+    </div>
 </header>
