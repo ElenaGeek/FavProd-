@@ -5,24 +5,30 @@
 @stop
 
 @section('content')
-    <main>
-  
-        <x-action/>
+    <main class="main">
 
-        @php
-        //dump($catalog);
-        @endphp
+        <section class="">
+            <x-banner/>
+        </section>
+        
+        <section class="">
+        <x-maindata :data="$catalog"></x-maindata>
+        </section>
+        
+        <section class="">
+            <x-popular/>
+        </section>
+        
+        <section class="">
+            <x-articles/>
+        </section>
 
-        <section class="presentation container">
+        <section class="">
+            <x-stories/>
+        </section>
 
-        <x-main/>
-     
-        @foreach ($catalog as $item =>$array)
-        <h3>Каталог {{ $array['name']}}</h3>
-        @endforeach
-
-        <x-popular/>
-
+        <section class="">
+            <x-reference/>
         </section>
 
     </main>

@@ -1,0 +1,28 @@
+.articles{
+    min-height: 50vh;
+
+    &__blocks{
+        @include flex-all-sb;
+        flex-wrap: wrap;
+    }
+    &__block{
+        width: 570px;
+        height: 400px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &__blocksm{
+        width: 350px;
+        height: 400px;
+    }
+}
+    .blback{
+        background-image: url(/storage/images/ad.jpg);
+        @include bg-cover;
+    }
+    .blpict{
+        @include flex-all-sb;
+        background-color:#E9EADF;
+    }
+    

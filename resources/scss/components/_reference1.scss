@@ -1,0 +1,26 @@
+.popular{
+    min-height: 50vh;
+
+    &__blocks{
+        @include flex-all-sb;
+        flex-wrap: wrap;
+    }
+    &__block{
+        width: 100%;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &__blocksm{
+        width: 50%;
+        height: 800px;
+    }
+}
+    .blback{
+        background-image: url(/storage/images/ad.jpg);
+        @include bg-cover;
+    }
+    .blpict{
+        @include flex-all-sb;
+        background-color:#E9EADF;
+    }

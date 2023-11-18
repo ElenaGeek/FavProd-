@@ -1,4 +1,4 @@
-<div class="header-container header-menu">
+<div class="header__container header__menu">
 
 	@foreach($menu as $item)
 	<div>

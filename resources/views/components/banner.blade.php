@@ -1,10 +1,12 @@
-<div class="action">
-        <div class="container">
-                <h1 class="action__title">
+<div class="banner">
+        <div class="container-narrow">
+        <div class="banner__block"> 
+                <h1 class="banner__title">
                     Еда
                 </h1>
-                <h2 class="action__text">
+                <h2 class="banner__text">
                     Многообразие впечатляет, главное - выбрать то, что нужно
                 </h2>
+        </div>
         </div>
 </div>

@@ -1,0 +1,21 @@
+.banner {
+    position: relative;
+    height: 85vh;
+    background-image: url(/storage/images/mainft.png);
+    @include bg-cover;
+
+    &__block{
+        position:absolute;
+        top:54%;
+    }
+
+    &__title{
+//        background-color: azure;
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    &__text{
+        background-color:var(--color-gray-light);
+    }
+
+}

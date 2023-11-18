@@ -11,4 +11,12 @@ class Catalog extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function getCatalogs()
+    {
+
+    $catalogs = Catalog::all();
+    return $catalogs;
+
+    }
 }

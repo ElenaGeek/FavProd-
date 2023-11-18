@@ -8,20 +8,42 @@
 
 <!-- 3-rd variant Tatar example -->
 
-    <div class="header-container header-list">   
+    <div class="header__container header__block">   
             <a class="header-logo" href="/">
                 <img class="/img" src="/img/logo.svg" alt="Logo">
             </a>
-            <nav class="header-nav">
+            <nav class="header__btnnav">
                 <ul>
                     <li><a href="https://daybyday.tatar/places">Места</a></li>
                     <li><a href="https://daybyday.tatar/routes">Маршруты</a></li>
                     <li><a href="https://daybyday.tatar/authors">Авторы</a></li>
                 </ul>
             </nav>
-            <div class="header-right">
-                                <a class="header-login dif link posr" href="#sign-in" data-modal-btn="">Войти</a>
-                                <a class="header-btn  dif link aic jcc transition" href="#">Меню</a>
+            <div class="header__right">
+                                <a class="header__login" href="#sign-in" data-modal-btn="">Войти</a>
+                                <a class="header__btn" href="#">Меню</a>
             </div>    
     </div>
+
+
+    <!-- 4-rd variant Shamenkov example -->
+
+    <div class="header__container header__block">   
+            <a class="header-logo" href="/">
+                <img class="/img" src="/img/logo.svg" alt="Logo">
+            </a>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="https://daybyday.tatar/places">Места</a></li>
+                    <li><a href="https://daybyday.tatar/routes">Маршруты</a></li>
+                    <li><a href="https://daybyday.tatar/authors">Авторы</a></li>
+                </ul>
+            </nav>
+            <div class="header__right">
+                                <a class="header__login" href="#sign-in" data-modal-btn="">Войти</a>
+                                <a class="header__btn" href="#">Меню</a>
+            </div>    
+    </div>
+
+
 </header>

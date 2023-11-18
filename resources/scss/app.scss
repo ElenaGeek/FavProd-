@@ -1,14 +1,17 @@
-// @import "mixins";
-// @import "vars";
-// @import "styles";
+//@import "mixins/blocks";
+//@import "vars/vars";
+//@import "styles/base";
 
-// @import "./components/header";
-// @import "./components/footer";
-// @import "./components/main_index";
 
 @import "./mixins/blocks";
 @import "./vars/vars";
-@import "./styles/styles";
+@import "./styles/base";
 
 @import "./components/header";
-
+@import "./components/banner";
+@import "./components/maindata";
+@import "./components/popular";
+@import "./components/articles";
+@import "./components/reference";
+@import "./components/stories";
+@import "./components/footer";

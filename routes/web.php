@@ -17,4 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::match(['get', 'post'],'/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/test', [\App\Http\Controllers\TestController::class, 'index'])->name('test');
+Route::match(['get', 'post'],'/catalog', [\App\Http\Controllers\CatalogController::class, 'index'])->name('catalog');
+
+//Route::get('/catalog', ['as' => 'catalog', 'uses' => 'CatalogController@index']);

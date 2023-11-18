@@ -1,6 +1,6 @@
 <footer class="footer">
-    <div class="footer__wrapper">
-        <div class="footer__block container ">
+    <div class="footer__container">
+        <div class="footer__block">
             <a href="{{ route('home') }}">
                 <img src="/images/logo.png" alt="logo">
             </a>
