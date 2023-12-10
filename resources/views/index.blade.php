@@ -14,6 +14,10 @@
         <section class="">
         <x-maindata :data="$catalog"></x-maindata>
         </section>
+
+        <section class="">
+            <x-daily/>
+        </section>
         
         <section class="">
             <x-popular/>

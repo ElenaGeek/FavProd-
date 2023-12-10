@@ -10,7 +10,7 @@
 
     <div class="header__container header__block">   
             <a class="header-logo" href="/">
-                <img class="/img" src="/img/logo.svg" alt="Logo">
+                <img class="/img" src="/storage/images/logo1.jpg" alt="Logo">
             </a>
             <nav class="header__btnnav">
                 <ul>
@@ -30,7 +30,7 @@
 
     <div class="header__container header__block">   
             <a class="header-logo" href="/">
-                <img class="/img" src="/img/logo.svg" alt="Logo">
+                <img class="/img" src="/storage/images/logo2.jpg" alt="Logo">
             </a>
             <nav class="header__nav">
                 <ul>
@@ -41,7 +41,7 @@
             </nav>
             <div class="header__right">
                                 <a class="header__login" href="#sign-in" data-modal-btn="">Войти</a>
-                                <a class="header__btn" href="#">Меню</a>
+                                <a class="header__burg" href="#"><img class="/img" src="/storage/images/burger.svg" alt="Logo"></a>
             </div>    
     </div>
 

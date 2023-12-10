@@ -207,6 +207,16 @@ ul {
   color: var(--color-green);
 }
 
+.header__burg {
+  padding: 8px 30px;
+  margin-left: 25px;
+}
+.header__burg:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+  transform: rotate(90deg);
+}
+
 .banner {
   position: relative;
   height: 85vh;
@@ -214,6 +224,7 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 30px;
 }
 .banner__block {
   position: absolute;
@@ -227,54 +238,51 @@ ul {
   background-color: var(--color-gray-light);
 }
 
+/******************************** Planshet 1160px******************************/
+/******************************** Phone 788px*********************************/
 .maindatatitle {
   display: block;
   margin-bottom: 10px;
 }
 .maindata__blocks {
-  width: 100%;
-  height: 240px;
+  position: relative;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  border-radius: 10px;
   overflow: hidden;
 }
 .maindata__block {
   width: 100%;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+  min-height: 120px;
   background-color: azure;
-  clear: both;
 }
 .maindata__selection {
   width: 100%;
-  height: 60px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 .maindata__selblock {
-  width: 150px;
-  height: 40px;
+  width: 180px;
+  height: 30px;
 }
 .maindata__label {
   font-size: small;
 }
 .maindata__list {
   font-size: small;
-  width: 150px;
+  width: 160px;
   height: 20px;
   padding: 2px 0 0 0;
 }
 .maindata__button {
   margin-top: 4px;
   font-size: small;
-  width: 150px;
+  width: 180px;
   padding: 8px 20px;
   color: var(--color-white);
   background-color: var(--color-green);
@@ -287,7 +295,9 @@ ul {
   position: relative;
   width: 100%;
   height: 120px;
-  background-image: url(/storage/images/mainft.png);
+  background-image: url(/storage/images/ingr1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .maindata__img {
   position: relative;
@@ -296,6 +306,8 @@ ul {
 }
 
 .ingr__button {
+  position: absolute;
+  top: 45%;
   width: 355px;
   background-color: var(--color-gray-light);
   padding: 2px 5px;
@@ -316,13 +328,11 @@ ul {
   min-height: 120px;
   background-color: var(--color-gray-light);
   display: none;
-  justify-content: flex-end;
   z-index: 10;
 }
 
 .ingr__overlay__open {
   display: flex;
-  justify-content: flex-end;
 }
 
 .ingr__close {
@@ -336,25 +346,66 @@ ul {
   transform: scale(1.2);
 }
 
-.popular__blocks {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/******************************** Planshet 1160px******************************/
+@media (max-width: 1160px) {
+  .maindata__selection {
+    flex-wrap: wrap;
+  }
+  .maindata__button {
+    width: 160px;
+  }
+  .maindata .ingr__overlay {
+    min-height: 120px;
+  }
 }
-.popular__block {
-  width: 370px;
+/******************************** Phone 788px*********************************/
+.daily {
+  padding: 30px 0 30px 0;
+}
+.daily__title {
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.daily__blocks {
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 30px;
+  flex-wrap: wrap;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(188, 197, 203, 0.2);
 }
-.popular__blocksm {
-  width: 370px;
-  height: 250px;
+.daily__text {
+  margin-bottom: 30px;
+}
+.daily__texttitle {
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.daily__textsm {
+  font-size: 28px;
+  color: aquamarine;
+  margin-top: 10px;
+}
+.daily__textbold {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.daily__block {
+  max-width: 580px;
+  min-height: 480px;
+}
+.daily__img {
+  width: 580px;
+  height: 480px;
 }
 
+/***************************************************************************/
 .blback {
-  background-image: url(/storage/images/ad.jpg);
+  background-image: url(/storage/images/popular1.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -364,20 +415,82 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E9EADF;
 }
 
+/******************************** Planshet 1160px******************************/
+@media (max-width: 1160px) {
+  .daily__blocks {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+/******************************** Phone 788px*********************************/
+.popular {
+  padding: 30px 0 30px 0;
+}
+.popular__blocks {
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.popular__block {
+  width: 31.6%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(188, 197, 203, 0.2);
+}
+.popular__blocksm {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.popular__img {
+  width: 370px;
+  height: 250px;
+}
+
+/***************************************************************************/
+.blback {
+  background-image: url(/storage/images/popular1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blpict {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/******************************** Planshet 1160px******************************/
+@media (max-width: 1160px) {
+  .popular__blocks {
+    justify-content: center;
+  }
+  .popular__block {
+    width: 370px;
+    margin-right: 25px;
+  }
+}
+/******************************** Phone 788px*********************************/
 .articles {
   min-height: 50vh;
 }
 .articles__blocks {
+  max-width: 1170px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
   flex-wrap: wrap;
 }
 .articles__block {
-  width: 570px;
+  width: 48.7%;
   height: 400px;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -386,6 +499,7 @@ ul {
 .articles__blocksm {
   width: 350px;
   height: 400px;
+  background-color: beige;
 }
 
 .blback {
@@ -399,14 +513,27 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E9EADF;
 }
 
+/******************************** Planshet 1160px******************************/
+/******************************** Phone 788px*********************************/
+@media (max-width: 788px) {
+  .articles__blocks {
+    justify-content: center;
+  }
+  .articles__block {
+    width: 570px;
+  }
+}
 .reference__blocks {
+  max-width: 1170px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(188, 197, 203, 0.2);
 }
 .reference__block {
   width: 100%;
@@ -417,6 +544,7 @@ ul {
 .reference__blocksm {
   width: 50%;
   height: 540px;
+  background-color: azure;
 }
 
 .blback {
@@ -430,19 +558,30 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E9EADF;
 }
 
+/******************************** Planshet 1160px******************************/
+@media (max-width: 1160px) {
+  .reference__blocks {
+    height: 800px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+/******************************** Phone 788px*********************************/
 .stories {
   min-height: 50vh;
 }
 .stories__blocks {
+  max-width: 1170px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 .stories__block {
-  width: 370px;
+  width: 31.6%;
   height: 800px;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -464,9 +603,19 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E9EADF;
 }
 
+/******************************** Planshet 1160px******************************/
+/******************************** Phone 788px*********************************/
+@media (max-width: 788px) {
+  .stories__blocks {
+    justify-content: center;
+  }
+  .stories__block {
+    width: 370px;
+    margin-right: 15px;
+  }
+}
 .footer {
   background-color: var(--color-gray);
   width: 100%;

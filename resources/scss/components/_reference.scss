@@ -2,8 +2,12 @@
 //    min-height: 50vh;
 
     &__blocks{
+        max-width: 1170px;
         @include flex-all-sb;
-        flex-wrap: wrap;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(188, 197, 203, 0.2);
     }
     &__block{
         width: 100%;
@@ -14,6 +18,8 @@
     &__blocksm{
         width: 50%;
         height: 540px;
+        background-color:azure;
+
     }
 }
     .blback{
@@ -22,5 +28,19 @@
     }
     .blpict{
         @include flex-all-sb;
-        background-color:#E9EADF;
     }
+
+/******************************** Planshet 1160px******************************/
+@media(max-width: 1160px) {
+    .reference{
+        &__blocks{
+            height: 800px;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }    
+}
+/******************************** Phone 788px*********************************/
+@media(max-width: 788px) {
+
+}    

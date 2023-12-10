@@ -128,3 +128,14 @@
         color: var(--color-green);
         }
 }
+.header__burg {
+    padding: 8px 30px;
+    margin-left: 25px;
+    
+        &:hover {
+//            size-adjust: 110%;
+            transition: 0.5s;
+            transform: scale(1.2);
+            transform: rotate(90deg);
+        }
+}

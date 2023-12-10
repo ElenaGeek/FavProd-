@@ -3,6 +3,7 @@
     height: 85vh;
     background-image: url(/storage/images/mainft.png);
     @include bg-cover;
+    margin-bottom: 30px;
 
     &__block{
         position:absolute;
@@ -19,3 +20,14 @@
     }
 
 }
+
+/******************************** Planshet 1160px******************************/
+@media(max-width: 1160px) {
+
+    
+}
+/******************************** Phone 788px*********************************/
+@media(max-width: 788px) {
+    
+}
+

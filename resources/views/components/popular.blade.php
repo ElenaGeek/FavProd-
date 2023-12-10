@@ -4,30 +4,30 @@
 
 <div class="popular__blocks">
     <div class="popular__block">
-    <h4>1</h4>
-            <div class="popular__blocksm blback">
-                
+    
+            <div class="popular__blocksm">
+                <img class="popular__img" src="/storage/images/popular1.png" alt="">
             </div>
             <div class="popular__blocksm">
-
+            <h4>1</h4> 
             </div>
     </div>
     <div class="popular__block">
-    <h4>1</h4>
+    
             <div class="popular__blocksm blback">
-                
+            
             </div>
             <div class="popular__blocksm">
-
+            <h4>2</h4> 
             </div>
     </div>
     <div class="popular__block">
-    <h4>1</h4>
+   
             <div class="popular__blocksm blback">
-                
+             
             </div>
             <div class="popular__blocksm">
-
+            <h4>3</h4> 
             </div>
     </div>
 </div>

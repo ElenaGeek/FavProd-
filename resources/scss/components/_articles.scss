@@ -2,11 +2,13 @@
     min-height: 50vh;
 
     &__blocks{
+        max-width: 1170px;
         @include flex-all-sb;
+        margin-bottom: 30px;
         flex-wrap: wrap;
     }
     &__block{
-        width: 570px;
+        width: 48.7%;
         height: 400px;
         margin-bottom: 30px;
         border-radius: 10px;
@@ -15,6 +17,7 @@
     &__blocksm{
         width: 350px;
         height: 400px;
+        background-color: beige;
     }
 }
     .blback{
@@ -23,6 +26,22 @@
     }
     .blpict{
         @include flex-all-sb;
-        background-color:#E9EADF;
     }
+
+/******************************** Planshet 1160px******************************/
+@media(max-width: 1160px) {
+
+    
+}
+/******************************** Phone 788px*********************************/
+@media(max-width: 788px) {
+    .articles{
+        &__blocks{
+            justify-content: center;
+        }
+        &__block{
+            width:570px;
+        }
+    }
+}
     
