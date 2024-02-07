@@ -16,6 +16,7 @@ class Catalog extends Model
         'name',
     ];
 
+/*    
     public function getCatalogs()
     {
     $catalogs = Catalog::all();
@@ -33,4 +34,5 @@ class Catalog extends Model
     {
         return $this->hasMany(Product::class, 'catalog_name');
     }
+*/    
 }

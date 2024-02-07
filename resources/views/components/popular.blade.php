@@ -1,6 +1,6 @@
 <div class="popular container-narrow">
     
-    <h3 class="popular__title">Популярные блюда</h3>
+    <h3 id="slide3" class="popular__title">Популярные блюда</h3>
 
 <div class="popular__blocks">
     <div class="popular__block">

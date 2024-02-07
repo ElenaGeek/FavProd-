@@ -22,8 +22,11 @@ Route::get('/test', [\App\Http\Controllers\TestController::class, 'index'])->nam
 
 Route::match(['get', 'post'],'/catalog', [\App\Http\Controllers\CatalogController::class, 'index'])->name('catalog');
 
-Route::match(['get', 'post'],'/sample', [\App\Http\Controllers\ProductController::class, 'index'])->name('sample');
+Route::match(['get', 'post'],'/selection', [\App\Http\Controllers\SelectionController::class, 'index'])->name('selection');
+
+Route::match(['get', 'post'],'/product/{id}', [\App\Http\Controllers\ProductController::class, 'index'])->name('product');
+//Route::get('/product/{id}', [\App\Http\Controllers\ProductController::class, 'index'])->name('product');
 
 //Route::match(['get', 'post'],'/catalog', ['as' => 'catalog', 'uses' => 'CatalogController@index']);
-//Route::get('/sample', ['as' => 'sample', 'uses' => 'ProductController@index']);
+//Route::get('/selection', ['as' => 'selection', 'uses' => 'ProductController@index']);
 

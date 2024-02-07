@@ -25,7 +25,7 @@
 //        flex-direction: column;
         background-color:azure;
     }
-    &__selection{
+    &__selblocks{
         width: 100%;
         height: 120px;
         @include flex-all-sb;
@@ -45,14 +45,14 @@
     &__list{
         font-size: small;
         width:160px;
-        height: 20px;
+        height: 30px;
         padding: 2px 0 0 0;
     }
     &__button{
-        margin-top: 4px;
+        margin-top: 18px;
         font-size: small;
         width:180px;
-        padding: 8px 20px;
+        padding: 6.5px 20px;
         color: var(--color-white);
         background-color: var(--color-green);
 
@@ -131,7 +131,7 @@
         &__block{
 //            min-height: 130px;
         }
-        &__selection{
+        &__selblocks{
             flex-wrap: wrap;
         }
         &__button{
@@ -154,7 +154,7 @@
         &__block{
 //            min-height: 130px;
         }
-        &__selection{
+        &__selblocks{
 
         }
 

@@ -258,7 +258,7 @@ ul {
   min-height: 120px;
   background-color: azure;
 }
-.maindata__selection {
+.maindata__selblocks {
   width: 100%;
   height: 120px;
   display: flex;
@@ -276,14 +276,14 @@ ul {
 .maindata__list {
   font-size: small;
   width: 160px;
-  height: 20px;
+  height: 30px;
   padding: 2px 0 0 0;
 }
 .maindata__button {
-  margin-top: 4px;
+  margin-top: 18px;
   font-size: small;
   width: 180px;
-  padding: 8px 20px;
+  padding: 6.5px 20px;
   color: var(--color-white);
   background-color: var(--color-green);
 }
@@ -348,7 +348,7 @@ ul {
 
 /******************************** Planshet 1160px******************************/
 @media (max-width: 1160px) {
-  .maindata__selection {
+  .maindata__selblocks {
     flex-wrap: wrap;
   }
   .maindata__button {
@@ -655,4 +655,137 @@ ul {
 }
 .footer__link:hover {
   color: var(--color-link-hover);
-}/*# sourceMappingURL=app.css.map */
+}
+
+.selection {
+  padding: 30px 0 30px 0;
+}
+.selection__blocks {
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.selection__block {
+  width: 31.6%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(188, 197, 203, 0.2);
+}
+.selection__blocksm {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.selection__blocklt {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.selection__img {
+  width: 370px;
+  height: 250px;
+}
+
+/***************************************************************************/
+.blback {
+  background-image: url(/storage/images/popular1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blpict {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/******************************** Planshet 1160px******************************/
+@media (max-width: 1160px) {
+  .selection__blocks {
+    justify-content: center;
+  }
+  .selection__block {
+    width: 370px;
+    margin-right: 25px;
+  }
+}
+/******************************** Phone 788px*********************************/
+.product {
+  padding: 30px 0 30px 0;
+}
+.product__title {
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: aqua;
+}
+.product__blocks {
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(188, 197, 203, 0.2);
+}
+.product__text {
+  width: 550px;
+  margin-left: 30px;
+}
+.product__texttitle {
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.product__textsm {
+  font-size: 28px;
+  color: aquamarine;
+  margin-top: 10px;
+}
+.product__textbold {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.product__block {
+  max-width: 580px;
+  min-height: 480px;
+  margin-bottom: 30px;
+}
+.product__blocklt {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.product__img {
+  width: 580px;
+  height: 480px;
+}
+
+/***************************************************************************/
+.blback {
+  background-image: url(/storage/images/popular1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blpict {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/******************************** Planshet 1160px******************************/
+@media (max-width: 1160px) {
+  .product__blocks {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+/******************************** Phone 788px*********************************//*# sourceMappingURL=app.css.map */

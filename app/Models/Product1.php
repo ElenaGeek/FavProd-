@@ -17,26 +17,20 @@ class Product extends Model
         'name',
         'description',
         'catalog_name',
-        'category_name',
         'image_id',
         'slug',
     ];
 
-//    public function getProduct()
-//    {
-//        return $this->Product::find(1)->name;
-//    }
+    public function getProduct()
+    {
+        return $this->Product::find(1)->name;
+    }
 
     public function catalogs()
     {
         return $this->belongsTo(Catalog::class, 'catalog_name');
     }
 
-    public function categories()
-    {
-        return $this->belongsTo(Category::class, 'category_name');
-    }
-/*
     public function images()
     {
         return $this->morphMany(Image::class, 'image_id');
@@ -50,5 +44,4 @@ class Product extends Model
             ]
         ];
     }
-*/
 }

@@ -4,13 +4,13 @@
 <p>текст</p>
 
 <div class="maindata__choice">
-<div class="maindata__selection">
+<div class="maindata__selblocks">
 
 <!--
-<form method="POST" class="maindata__selection" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
-<form method="post" class="maindata__selection" action="$_POST['selected']">   
+<form method="POST" class="maindata__selblocks" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
+<form method="post" class="maindata__selblocks" action="$_POST['selected']">   
 -->   
-<form method="post" class="maindata__selection" action="">    
+<form method="post" class="maindata__selblocks" action="">    
 @csrf
           
             <div class="maindata__selblock">
@@ -103,13 +103,13 @@
 <p>текст</p>
 
 <div class="maindata__choice">
-<div class="maindata__selection">
+<div class="maindata__selblocks">
 
 <!--
-<form method="POST" class="maindata__selection" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
-<form method="post" class="maindata__selection" action="$_POST['selected']">   
+<form method="POST" class="maindata__selblocks" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
+<form method="post" class="maindata__selblocks" action="$_POST['selected']">   
 -->   
-<form method="post" class="maindata__selection" action="">    
+<form method="post" class="maindata__selblocks" action="">    
 @csrf
           
             <div class="maindata__selblock">

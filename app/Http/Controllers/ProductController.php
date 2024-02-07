@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Catalog;
+use App\Models\Category;
 use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index(Request $request, Catalog $catalogs)
+    public function index(Request $request, Catalog $catalogs, $id)
 {
 
     $catalog_name = $request->get('catalog_item');
@@ -19,13 +20,13 @@ class ProductController extends Controller
 
     $catalogs = $catalogs->getCatalogs();
     $catalog = Catalog::all()->where('name', $catalog_name);
-    $product = Product::all()->where('catalog_name', $catalog_name);
+    $product = Product::all()->where('id', $id);
     $products = Product::All();
 
-//    dump($catalog);
-//    dump($product);
+    dump($id);
+    dump($product);
 
-    return view('sample', [
+    return view('product', [
         'catalogs'=>$catalogs,
         'catalog'=>$catalog,
         'products'=>$products,

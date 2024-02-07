@@ -2,13 +2,17 @@
 
 @section('title')
 @parent
-	Sample
+	Product
 @endsection
 
 @section('content')
 <h1>Прием пищи</h1>
-<h2>Приветствуем на странице категорий</h2>
-<p>Для просмотра конкретной категории выберите и пройдите по ссылке</p>
+<h2>Приветствуем на странице продукта</h2>
+<p class="product_text">Смотрите рецепт</p>
+
+<section class="">
+            <x-popular/>
+</section>
 
 	@php
 	//dd($products);

@@ -25,7 +25,7 @@
         background-color:azure;
         clear: both;
     }
-    &__selection{
+    &__selblocks{
         width: 100%;
         height: 60px;
         @include flex-all-sb;
@@ -125,7 +125,7 @@
         &__block{
 //            min-height: 130px;
         }
-        &__selection{
+        &__selblocks{
             flex-wrap: wrap;
         }
         &__ingr{
@@ -142,7 +142,7 @@
         &__block{
 //            min-height: 130px;
         }
-        &__selection{
+        &__selblocks{
 
         }
         .ingr__button {

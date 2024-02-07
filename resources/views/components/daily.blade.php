@@ -3,7 +3,7 @@
 </div>
 <div class="daily container-narrow">
     
-    <h1 class="daily__title">Блюдо дня</h1>
+    <h1 id="slide2" class="daily__title">Блюдо дня</h1>
 
 <div class="daily__blocks">
     <div class="daily__text">

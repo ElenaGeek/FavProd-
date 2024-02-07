@@ -12,25 +12,15 @@
 
 @php
       //dd($data);
-      //dump($data);
+      dump($data);
 
       $catalog = $data[0];
       $category = $data[1];
-      $kind = $data[2];
-      $group = $data[3];
-      $rubric = $data[4];
-      $protein = $data[5];
-      $carb = $data[6];
-      $dairyveg = $data[7];
-      $fruitdrink = $data[8];
-      $oilnut = $data[9];
-      $sweet = $data[10];
-      
 @endphp
 
 @foreach ($catalog as $item =>$array)
       @php
-//      echo $array['name'];
+      echo $array['name'];
       @endphp                    
 @endforeach
 
@@ -41,7 +31,7 @@
             <div class="maindata__selblock">
 <!--                  <label class="maindata__label" for="catalog_item">Прием пищи</label>-->
                   <select class="maindata__list" name="catalog_item">
-                        @foreach ($catalog as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
@@ -50,16 +40,16 @@
             <div class="maindata__selblock">
                   <label class="maindata__label" for="category_item">Вид блюда</label>
                   <select class="maindata__list" name="category_item">
-                        @foreach ($category as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
                   </select>
             </div>
             <div class="maindata__selblock">
-                  <label class="maindata__label" for="kind_item">Основной состав</label>
-                  <select class="maindata__list" name="kind_item">
-                        @foreach ($kind as $item =>$array)
+                  <label class="maindata__label" for="type_item">Основной состав</label>
+                  <select class="maindata__list" name="type_item">
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
@@ -68,16 +58,16 @@
             <div class="maindata__selblock">
                   <label class="maindata__label" for="group_item">Ценность ингредиентов</label>
                   <select class="maindata__list" name="group_item">
-                        @foreach ($group as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
                   </select>
             </div>
             <div class="maindata__selblock">                 
-                  <label class="maindata__label" for="rubric_item">Назначение</label>
-                  <select class="maindata__list" name="rubric_item">
-                        @foreach ($rubric as $item =>$array)
+                  <label class="maindata__label" for="class_item">Назначение</label>
+                  <select class="maindata__list" name="class_item[]" multiple>
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
@@ -102,7 +92,7 @@
             <div class="maindata__selblock">
                   <label class="maindata__label" for="list1_item">Белки</label>
                   <select class="maindata__list" name="list1_item">
-                        @foreach ($protein as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
@@ -111,7 +101,7 @@
             <div class="maindata__selblock">
                   <label class="maindata__label" for="list2_item">Углеводы</label>
                   <select class="maindata__list" name="list2_item">
-                        @foreach ($carb as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
@@ -120,25 +110,25 @@
             <div class="maindata__selblock">
                   <label class="maindata__label" for="list3_item">Овощи</label>
                   <select class="maindata__list" name="list3_item">
-                        @foreach ($dairyveg as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
                   </select>
             </div>
             <div class="maindata__selblock">
-                  <label class="maindata__label" for="list4_item">Фрукты, напитки</label>
+                  <label class="maindata__label" for="list4_item">Масла, приправы</label>
                   <select class="maindata__list" name="list4_item">
-                        @foreach ($fruitdrink as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
                   </select>
             </div>
             <div class="maindata__selblock">
-                  <label class="maindata__label" for="list5_item">Масла, приправы</label>
+                  <label class="maindata__label" for="list5_item">Фрукты, напитки</label>
                   <select class="maindata__list" name="list5_item">
-                        @foreach ($oilnut as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach
@@ -147,7 +137,7 @@
             <div class="maindata__selblock">                 
                   <label class="maindata__label" for="list6_item">Cладости</label>
                   <select class="maindata__list" name="list6_item[]" multiple>
-                        @foreach ($sweet as $item =>$array)
+                        @foreach ($data as $item =>$array)
                         <h3>{{ $array['name']}}</h3>
                         <option value="{{ $array['name']}}">{{ $array['name']}}</option>
                         @endforeach

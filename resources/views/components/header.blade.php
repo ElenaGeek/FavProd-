@@ -30,13 +30,13 @@
 
     <div class="header__container header__block">   
             <a class="header-logo" href="/">
-                <img class="/img" src="/storage/images/logo2.jpg" alt="Logo">
+                <img class="/img" src="/storage/images/logo6.jpg" alt="Logo">
             </a>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="https://daybyday.tatar/places">Места</a></li>
-                    <li><a href="https://daybyday.tatar/routes">Маршруты</a></li>
-                    <li><a href="https://daybyday.tatar/authors">Авторы</a></li>
+                    <li><a href="#slide1">Рецепты</a></li>
+                    <li><a href="#slide2">Блюдо дня</a></li>
+                    <li><a href="#slide3">Популярное</a></li>
                 </ul>
             </nav>
             <div class="header__right">

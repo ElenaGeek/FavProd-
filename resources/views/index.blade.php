@@ -10,9 +10,9 @@
         <section class="">
             <x-banner/>
         </section>
-        
+
         <section class="">
-        <x-maindata :data="$catalog"></x-maindata>
+        <x-maindata :data="[$catalog, $category, $kind, $group, $rubric, $protein, $carb, $dairyveg, $fruitdrink, $oilnut, $sweet]"></x-maindata>
         </section>
 
         <section class="">

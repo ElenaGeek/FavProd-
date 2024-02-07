@@ -12,17 +12,17 @@
 
 <!--
       
-<form method="POST" class="maindata__selection" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
-<form method="post" class="maindata__selection" action="$_POST['selected']"> 
+<form method="POST" class="maindata__selblocks" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
+<form method="post" class="maindata__selblocks" action="$_POST['selected']"> 
 
-<form method="post" class="maindata__selection" action="">
+<form method="post" class="maindata__selblocks" action="">
 
-<form method="POST" class="maindata__selection" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate> 
+<form method="POST" class="maindata__selblocks" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate> 
 -->  
-<form id="mainform" method="POST" action="{{ isset($product) ? route('/', $sample) : route('sample') }}" novalidate>       
+<form id="mainform" method="POST" action="{{ isset($product) ? route('/', $selection) : route('selection') }}" novalidate>       
 @csrf
 
-<div class="maindata__selection">
+<div class="maindata__selblocks">
             <div class="maindata__selblock">
                   <label class="maindata__label" for="catalog_item">Прием пищи</label>
                   <select class="maindata__list" name="catalog_item">
@@ -81,7 +81,7 @@
 
 <!--      <img class="maindata__img" src="/storage/images/mainft.png"></img> -->
 
-<div class="maindata__selection ingr__overlay">
+<div class="maindata__selblocks ingr__overlay">
 
 
             <div class="maindata__selblock">
@@ -195,20 +195,20 @@
 
 <!--      <img class="maindata__img" src="/storage/images/mainft.png"></img> -->
 <!----
-<div class="maindata__selection ingr__overlay">
+<div class="maindata__selblocks ingr__overlay">
 
 <button class="ingr__close">
       <img src="storage/images/delete.png" alt="Delete">
 </button>
       -->
 <!--
-<form method="POST" class="maindata__selection" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
-<form method="post" class="maindata__selection" action="$_POST['selected']">   
+<form method="POST" class="maindata__selblocks" action="{{ isset($catalog) ? route('/', $catalog) : route('catalog') }}" novalidate>
+<form method="post" class="maindata__selblocks" action="$_POST['selected']">   
 
-<form method="post" class="maindata__selection" action=""> 
+<form method="post" class="maindata__selblocks" action=""> 
 --> 
 <!--  
-<form id="mainform" method="POST" class="maindata__selection" action="{{ isset($product) ? route('/', $sample) : route('sample') }}" novalidate>      
+<form id="mainform" method="POST" class="maindata__selblocks" action="{{ isset($product) ? route('/', $selection) : route('selection') }}" novalidate>      
 @csrf
           
             <div class="maindata__selblock">

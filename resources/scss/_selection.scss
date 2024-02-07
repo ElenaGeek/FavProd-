@@ -1,0 +1,63 @@
+.selection{
+//    min-height: 50vh;
+    padding: 30px 0 30px 0;
+
+    &__blocks{
+        max-width: 1170px;
+        @include flex-all-sb;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    &__block{
+        width: 31.6%;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(188, 197, 203, 0.2);
+    }
+    &__blocksm{
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+//        display: flex;
+//        justify-content: center;
+//        align-items: center;
+    }
+    &__blocklt{
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+    }
+    &__img{
+        width: 370px;
+        height: 250px;
+//        object-fit: cover;
+//        object-position: 50% 50%;
+    }
+}
+/***************************************************************************/
+    .blback{
+        background-image: url(/storage/images/popular1.png);
+        @include bg-cover;
+    }
+    .blpict{
+        @include flex-all-sb;
+    }
+
+/******************************** Planshet 1160px******************************/
+@media(max-width: 1160px) {
+    .selection{
+        &__blocks{
+            justify-content: center;
+        }
+        &__block{
+            width:370px;
+            margin-right: 25px;
+        }
+    }
+    
+}
+/******************************** Phone 788px*********************************/
+@media(max-width: 788px) {
+   
+}
