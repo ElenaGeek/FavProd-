@@ -13,56 +13,57 @@ class HomeController extends Controller
     {
 
 //        $category =[
-//            1=> ['name' => 'Любой'],
+//            1=> ['name' => '...'],
 //            2=> ['name' => 'Салат'],
 //            3=> ['name' => 'Суп'],
 //            4=> ['name' => 'Закуска']
 //            ];
+
         $kind =[
-            1=> ['name' => 'Любой'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Мясо'],
             3=> ['name' => 'Рыба'],
             4=> ['name' => 'Творог']
             ];
         $group =[
-            1=> ['name' => 'Любая'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Железо'],
             3=> ['name' => 'Кальций'],
             4=> ['name' => 'Магний']
             ];
         $rubric =[
-            1=> ['name' => 'Любое'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Для костей'],
             3=> ['name' => 'Для сосудов'],
             4=> ['name' => 'Для похудения']
             ];
 
         $protein =[
-            1=> ['name' => 'Любой'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Говядина'],
             3=> ['name' => 'Лосось'],
             4=> ['name' => 'Творог']
                 ];
         $carb =[
-            1=> ['name' => 'Любой'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Хлеб'],
             3=> ['name' => 'Мука'],
             4=> ['name' => 'Свекла']
                 ]; 
         $dairyveg =[
-            1=> ['name' => 'Любой'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Морковь']
                 ];
         $fruitdrink =[
-            1=> ['name' => 'Любой'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Яблоко']
                 ];
         $oilnut =[
-            1=> ['name' => 'Любой'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Оливковое']
                 ];
         $sweet =[
-            1=> ['name' => 'Любой'],
+            1=> ['name' => '...'],
             2=> ['name' => 'Мёд']
                 ];  
                                  
@@ -72,6 +73,9 @@ class HomeController extends Controller
         //$user = User::find(1);   // для отладки
         $catalog = Catalog::all();
         $category = Category::all();
+        
+//$category = Category::all()->where('name', 'Суп');
+//dump($category);
 
         //dump($catalog);
         //dd($carb); 

@@ -2,124 +2,135 @@
 
 @section('title')
 @parent
-	Selection
+Selection
 @endsection
 
 @section('content')
 
 <div class="selection container-narrow">
-<h1>Рецепты</h1>
-<h2>Найдено ХХ рецептов</h2>
-<p>Сортировать по </p>
 
-	@php
-	//dd($products);
-	//dump($products);
-	@endphp
+      <div class="selection__top">
 
-<br>
+            @switch(substr($productnumber, -1, 1))
+            @case(1)
+            <h3>Найдено {{$productnumber}} рецепт</h2>
+                  @break
+                  @case(2)
+                  <h3>Найдено {{$productnumber}} рецепта</h2>
+                        @break
+                        @case(3)
+                        <h3>Найдено {{$productnumber}} рецепта</h2>
+                              @break
+                              @case(4)
+                              <h3>Найдено {{$productnumber}} рецепта</h2>
+                                    @break
+                                    @default
+                                    <h3>Найдено {{$productnumber}} рецептов</h2>
+                                          @endswitch
 
-<?php
+                                          @php
+                                          //dd($products);
+                                          //dump($products);
+                                          @endphp
 
-if(isset($_POST['submit'])){
-  
-      $selected_catalog = $_POST['catalog_item'];
-      echo '' . $selected_catalog;             
+                                          <br>
+                                          <h3>
+                                                <a class="selection__link" href="/#slide1">Изменить выбор</a> :
+                                                @if($catalog_name[0] != '...')
+                                                <span>
+                                                      {!! $catalog_name[0] !!}
+                                                </span>
+                                                @endif
+                                                @if($category_name[0] != '...')
+                                                <span>
+                                                      ~ {!! $category_name[0] !!}
+                                                </span>
+                                                @endif
+                                                @if($kind_name[0] != '...')
+                                                <span>
+                                                      ~ {!! $kind_name[0] !!}
+                                                </span>
+                                                @endif
 
-      $selected_category = $_POST['category_item'];
-      echo '  >  ' . $selected_category;
+                                          </h3>
 
-      $selected_kind = $_POST['kind_item'];
-      echo '  >  ' . $selected_kind;
+      </div>
+      <br>
+      <!--<p>Сортировать по: алфавиту, дате, популярности </p>-->
 
-      $selected_group = $_POST['group_item'];
-      echo '  >  ' . $selected_group;
+      <div class="selection__blocks">
 
-      $selected_rubric = $_POST['rubric_item'];
-      echo '  >  ' . $selected_rubric;    
-    
-//      if(!empty($_POST['rubric_item'])) { 
-//            foreach($_POST['rubric_item'] as $selected_rubric){
-//                  echo '  >  ' . $selected_rubric;
-//            }          
-//      } 
-      
-//	dump($catalogs);	
-//      dump($catalog);
-//      dump ($products);
-//      dump ($product);
-//      dump($selected_catalog);
-     
-}
-else {
-//            echo 'Please select any value';
-    }
-?>
-<br></br>
-<div class="selection__blocks">
+            @forelse($product as $id => $item)
 
-    @forelse($product as $id => $item)
 
-                  <div class="selection__block">   
-                        <div class="selection__blocksm">
-                        <img src='/storage/images/products/{{$item->id}}.png'></img><br>
-                        </div>
-                        <div class="selection__blocklt">
-                        <br>
-                        <h4>
-                              <a href='/product/{{$item->id}}'>
-                              {{$item->catalog_name}}{{$item->name}}{{$item->slug}}
-                              </a> 
-                        </h4>
-                        <br>       
-                              <p><i style="color:blue">Порций ~ {{$item->id}}</i></p>
-                              <p><i style="color:red">Минут приготовления ~ {{$item->id}}</i></p>
-                        </div>
+            <div class="selection__block">
+                  <div class="selection__blocksm">
+                        <img class="selection__img" src='/storage/images/products/{{$item->id}}.png'></img><br>
                   </div>
+                  <div class="selection__blocklt">
+
+                        <h4>
+                              <a href='/recipy/{{$item->slug}}'>
+                                    {{$item->catalog_name}} ~ {{$item->category_name}} ~ {{$item->kind_name}} : {{$item->name}}
+                              </a>
+                        </h4>
 
 
-    @empty
-    	Новостей нет !!!
-    @endforelse
-</div>
-	<br><br>
+                        <b><i style="color:green">{{$item->brief}} </i></b>
+                        <br><br>
+                        <p><i>Порций : {{$item->portions}}</i></p>
+                        <p><i>Время приготовления : {{$item->duration}} минут</i></p>
 
-	<?php
+                  </div>
+            </div>
 
-      if(isset($_POST['submit'])){
-        
+
+            @empty
+            Рецептов нет !!!
+            <div class="selection__blockempty">
+            </div>
+            @endforelse
+            <div class="selection__blockempty">
+            </div>
+      </div>
+      <br><br>
+
+      <?php
+      /*
+
+      if (isset($_POST['submit'])) {
+
             $selected_catalog = $_POST['catalog_item'];
-            echo 'Your catalog: ' . $selected_catalog;             
+            echo 'Catalog: ' . $selected_catalog;
 
             $selected_category = $_POST['category_item'];
-            echo 'Your category: ' . $selected_category;
+            echo 'Category: ' . $selected_category;
 
             $selected_kind = $_POST['kind_item'];
-            echo 'Your kind: ' . $selected_kind;
+            echo 'Kind: ' . $selected_kind;
 
             $selected_group = $_POST['group_item'];
-            echo 'Your group: ' . $selected_group;
+            echo 'Group: ' . $selected_group;
 
             $selected_rubric = $_POST['rubric_item'];
-            echo 'Your list1: ' . $selected_rubric;    
-          
-//            if(!empty($_POST['rubric_item'])) { 
-//                  foreach($_POST['rubric_item'] as $selected_rubric){
-//                        echo 'Your rubric: ' . $selected_rubric;
-//                  }          
-//            } 
-            
-//	dump($catalogs);	
-//      dump($catalog);
-//      dump ($products);
-//      dump ($product);
-//      dump($selected_catalog);
-           
-      }
-      else {
-//            echo 'Please select any value';
-          }
-?>
+            echo 'Rubric: ' . $selected_rubric;
 
+            //            if(!empty($_POST['rubric_item'])) { 
+            //                  foreach($_POST['rubric_item'] as $selected_rubric){
+            //                        echo 'Your rubric: ' . $selected_rubric;
+            //                  }          
+            //            } 
+
+            //	dump($catalogs);	
+            //      dump($catalog);
+            //      dump ($products);
+            //      dump ($product);
+            //      dump($selected_catalog);
+
+      } else {
+            //            echo 'Please select any value';
+      }
+      */
+      ?>
 </div>
 @endsection

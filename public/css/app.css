@@ -9,6 +9,7 @@
   --color-green:#496C05;
   --color-red: #FD0101;
   --color-red_new: #DB3E31;
+  --color-violet:#551A8B;
   --color-green-light: #7A9D54;
   --color-green-light1: #B8CF9A;
   --color-green-light2: #7A9D54;
@@ -103,7 +104,7 @@ ul {
 }
 
 .header__btnnav {
-  margin: 0 260px 0 auto;
+  margin: 0 160px 0 auto;
 }
 .header__btnnav ul {
   list-style-type: none;
@@ -134,7 +135,7 @@ ul {
 }
 
 .header__nav {
-  margin: 0 260px 0 auto;
+  margin: 0 160px 0 auto;
 }
 .header__nav ul {
   list-style-type: none;
@@ -660,8 +661,21 @@ ul {
 .selection {
   padding: 30px 0 30px 0;
 }
+.selection__top {
+  padding: 20px 2px;
+  background-color: var(--color-gray-light);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(188, 197, 203, 0.2);
+}
+.selection__link {
+  color: var(--color-green);
+}
+.selection__link:hover {
+  text-decoration: underline;
+}
 .selection__blocks {
-  max-width: 1170px;
+  max-width: 790px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -669,7 +683,7 @@ ul {
   flex-wrap: wrap;
 }
 .selection__block {
-  width: 31.6%;
+  width: 370px;
   margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
@@ -685,9 +699,13 @@ ul {
   height: 100px;
   overflow: hidden;
 }
+.selection__blockempty {
+  width: 370px;
+}
 .selection__img {
   width: 370px;
-  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /***************************************************************************/
@@ -705,18 +723,30 @@ ul {
 }
 
 /******************************** Planshet 1160px******************************/
-@media (max-width: 1160px) {
+/******************************** Phone 788px*********************************/
+@media (max-width: 788px) {
   .selection__blocks {
     justify-content: center;
   }
-  .selection__block {
-    width: 370px;
-    margin-right: 25px;
-  }
 }
-/******************************** Phone 788px*********************************/
 .product {
+  max-width: 790px;
+  margin: 0 auto;
   padding: 30px 0 30px 0;
+}
+.product__top {
+  padding: 20px 2px;
+  align-items: center;
+  background-color: var(--color-gray-light);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(188, 197, 203, 0.2);
+}
+.product__link {
+  color: var(--color-violet);
+}
+.product__link:hover {
+  text-decoration: underline;
 }
 .product__title {
   font-size: 42px;
@@ -725,7 +755,7 @@ ul {
   color: aqua;
 }
 .product__blocks {
-  max-width: 1170px;
+  max-width: 790px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
@@ -734,9 +764,20 @@ ul {
   overflow: hidden;
   border: 1px solid rgba(188, 197, 203, 0.2);
 }
-.product__text {
-  width: 550px;
-  margin-left: 30px;
+.product__block {
+  max-width: 480px;
+  min-height: 250px;
+  margin-bottom: 10px;
+}
+.product__blocktext {
+  width: 300px;
+  padding: 2px 5px;
+  margin-bottom: 10px;
+}
+.product__blocklt {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
 }
 .product__texttitle {
   font-size: 32px;
@@ -752,19 +793,15 @@ ul {
   font-size: 20px;
   margin-top: 10px;
 }
-.product__block {
-  max-width: 580px;
-  min-height: 480px;
-  margin-bottom: 30px;
-}
-.product__blocklt {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
+.product__textinstr {
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 20px;
 }
 .product__img {
   width: 580px;
-  height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /***************************************************************************/
@@ -782,10 +819,12 @@ ul {
 }
 
 /******************************** Planshet 1160px******************************/
-@media (max-width: 1160px) {
+/******************************** Phone 788px*********************************/
+@media (max-width: 788px) {
+  .product {
+    padding: 0px 30px;
+  }
   .product__blocks {
-    align-items: center;
     flex-direction: column;
   }
-}
-/******************************** Phone 788px*********************************//*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app.css.map */

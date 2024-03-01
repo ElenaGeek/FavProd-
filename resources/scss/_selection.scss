@@ -2,14 +2,27 @@
 //    min-height: 50vh;
     padding: 30px 0 30px 0;
 
+    &__top{
+        padding: 20px 2px;
+        background-color: var(--color-gray-light);
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(188, 197, 203, 0.2);
+    }
+    &__link{
+        color: var(--color-green);
+    &:hover {
+        text-decoration:underline;
+        }
+    }
     &__blocks{
-        max-width: 1170px;
+        max-width: 790px;
         @include flex-all-sb;
         margin-bottom: 30px;
         flex-wrap: wrap;
     }
     &__block{
-        width: 31.6%;
+        width: 370px;
         margin-bottom: 30px;
         border-radius: 10px;
         overflow: hidden;
@@ -28,10 +41,13 @@
         height: 100px;
         overflow: hidden;
     }
+    &__blockempty{
+        width: 370px;
+    }
     &__img{
         width: 370px;
-        height: 250px;
-//        object-fit: cover;
+//        height: 250px;
+        object-fit: cover;
 //        object-position: 50% 50%;
     }
 }
@@ -46,18 +62,17 @@
 
 /******************************** Planshet 1160px******************************/
 @media(max-width: 1160px) {
+
+}
+/******************************** Phone 788px*********************************/
+@media(max-width: 788px) {
     .selection{
         &__blocks{
             justify-content: center;
         }
         &__block{
-            width:370px;
-            margin-right: 25px;
+//            margin-right: 25px;
         }
     }
-    
-}
-/******************************** Phone 788px*********************************/
-@media(max-width: 788px) {
    
 }

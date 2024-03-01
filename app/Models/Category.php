@@ -10,8 +10,9 @@ class Category extends Model
     use HasFactory;
 
     const TITLE = 'Категория';
-    const TABLE = 'category';
+    const TABLE = 'categories';
     protected $fillable = [
         'name',
     ];
+
 }

@@ -1,5 +1,5 @@
 <header class="header">
-<!-- 1-st variant Providers/AppServiceProvider.php to keep menu on each page -->
+<!-- 1-st variant app/Providers/AppServiceProvider.php to keep menu on each page -->
     <x-menu/>
 
 <!-- 2-nd variant Burger from CitiesOfRussia - mys project 
@@ -10,13 +10,13 @@
 
     <div class="header__container header__block">   
             <a class="header-logo" href="/">
-                <img class="/img" src="/storage/images/logo1.jpg" alt="Logo">
+                <img class="/img" src="/storage/images/logo6.jpg" alt="Logo">
             </a>
             <nav class="header__btnnav">
                 <ul>
-                    <li><a href="https://daybyday.tatar/places">Места</a></li>
-                    <li><a href="https://daybyday.tatar/routes">Маршруты</a></li>
-                    <li><a href="https://daybyday.tatar/authors">Авторы</a></li>
+                    <li><a href="/#slide1">Подбор рецептов</a></li>
+                    <li><a href="/#slide1">Блюдо дня</a></li>
+                    <li><a href="/#slide1">Популярное</a></li>
                 </ul>
             </nav>
             <div class="header__right">
@@ -34,9 +34,9 @@
             </a>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="#slide1">Рецепты</a></li>
-                    <li><a href="#slide2">Блюдо дня</a></li>
-                    <li><a href="#slide3">Популярное</a></li>
+                    <li><a href="/#slide1">Подбор рецептов</a></li>
+                    <li><a href="/#slide2">Блюдо дня</a></li>
+                    <li><a href="/#slide3">Популярное</a></li>
                 </ul>
             </nav>
             <div class="header__right">

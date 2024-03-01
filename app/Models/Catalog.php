@@ -16,13 +16,22 @@ class Catalog extends Model
         'name',
     ];
 
-/*    
-    public function getCatalogs()
+   
+    public function getCatalogs($catalog_name)
     {
-    $catalogs = Catalog::all();
+        if ($catalog_name === "Прием пищи") {
+            $catalogs = Catalog::all();
+
+        }else {
+            $catalogs = Catalog::all()->where('name', $catalog_name); 
+            }
+            
+//    dump($catalog_name);
+//    dump($catalogs);    
+
     return $catalogs;
     }
-
+/* 
     public function getCatalog()
     {
 //    $catalogn = Catalog::all()->where('name', $catalog_name);   
